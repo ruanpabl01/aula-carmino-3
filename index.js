@@ -4,8 +4,8 @@ const express = require("express");
 //mysql parece mais intuitivo do que mysql2
 const mysql = require("mysql2");
 const app = express();
-app.use(express.json());
 const port = process.env.PORT || 3000;
+app.use(express.json());
 
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_DATABASE } = process.env;
 
