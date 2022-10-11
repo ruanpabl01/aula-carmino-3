@@ -5,6 +5,7 @@ const express = require("express");
 const mysql = require("mysql2");
 const app = express();
 const port = process.env.PORT || 3000;
+
 app.use(express.json());
 
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_DATABASE } = process.env;
@@ -61,5 +62,5 @@ const pool = mysql.createPool({
   queueLimit: 0,
 });
 
-const porta = 3000;
-app.listen(porta, () => console.log(`Executando. Porta ${porta}`));
+
+app.listen(port, () => console.log(`Executando. Porta ${port}`));
